@@ -16,7 +16,7 @@ public class Deal
 
     public static boolean goodDeal(double orginalPrice, double salePrice)
     {
-        if(salePrice < (3/4*orginalPrice))
+        if(salePrice < (0.75*orginalPrice))
         {
           return true;
         }
@@ -28,8 +28,8 @@ public class Deal
 
     public static void main(String[] args)
     {
-        testgoodDeal(20, 10, true);
         testgoodDeal(20, 16, false);
+        testgoodDeal(20, 12, true);
         testgoodDeal(20, 19, false);
     }
 }
