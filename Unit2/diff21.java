@@ -1,16 +1,6 @@
 public class diff21
 {
-    public static void testdiff21(int n, number expected)
-    {
-        int result = diff21(int n);
 
-        System.out.print("n" + n + " expected: " + expected + " result: " + result);
-
-        if (result == expected)
-            System.out.println("working");
-        else
-            System.out.println("not working");
-    }
 
     public static int diff21(int n)
     {
@@ -25,10 +15,22 @@ public class diff21
 
     }
 
+    public static String testdiff21(int n, int expected)
+    {
+        int result = diff21(n);
+
+        System.out.print("n" + n + " expected: " + expected + " result: " + result);
+
+        if (result == expected)
+          return("working");
+        else
+          return("not working");
+    }
+
     public static void main(String[] args)
     {
-        testdiff21(6,15);
-        testdiff21(22, 2);
-        testdiff21(54, 62);                
+        System.out.println(testdiff21(6,15));
+        System.out.println(testdiff21(22, 2));
+        System.out.println(testdiff21(69,96));
     }
 }

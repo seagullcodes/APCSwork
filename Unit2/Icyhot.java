@@ -1,14 +1,15 @@
 public class Icyhot
 {
-  public static void testIcyhot(int temp1, int temp2, boolean expected){
+  public static String testIcyhot(int temp1, int temp2, boolean expected){
   boolean result = temp(temp1, temp2);
-  System.out.println("temp. 1: " + temp1 + "temp. 2:" + temp2 + boolean expected);
+  System.out.println("temp. 1: " + temp1 + "temp. 2:" + temp2 + expected);
 
   if(result == expected)
   {
-    System.out.println( " happy");
+    return "happy";
   }
-  else{System.out.println("sad");
+  else{
+    return "sad";
 }
 }
 
@@ -28,5 +29,6 @@ public static boolean temp(int temp1, int temp2)
     System.out.println(temp(72,2));
     System.out.println(temp(-2, 110));
     System.out.println(testIcyhot(-5, 240, true));
+    System.out.println(testIcyhot(50, -4, false));
   }
 }
