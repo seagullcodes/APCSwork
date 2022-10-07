@@ -13,42 +13,48 @@ public class assignment2
       }
       return result;
     }
-    public static int countOccurences(String a, String ch)
+  /*  public static int countOccurences(String a, String ch)
     {
       int result = 0;
+      int diff = 0;
 
-      for(int l = 0; l>a.length()+1; l++)
+      if(a.length() % 3 == 0){
+        diff = 0;
+      } else if(a.length() % 3 == 1){
+        diff = 1;
+      } else if(a.length() % 3 == 2){
+        diff = 2;
+      }
+
+      for(int l = 0; l>a.length()-diff; l++)
       {
-        String b = a.substring(l, l+ch.length());
+        String b = a.substring(l, l+3);
         if(b.equals(ch))
         {
-          result += 1;
-        }
-        else{
-          result = -1;
-        }
+
       }
       return result;
     }
+  }*/
     public static String reverse(String start)
     {
       String reverseresult = " ";
 
-      for(int r = 0; r>start.length()+1; r++)
+      for(int r = 0; r>start.length(); r++)
       {
-        String ra = start.substring(r, r+1);
+        String ra = start.substring(start.length()-1-r, start.length()-r);
         reverseresult = reverseresult + ra;
       }
       return reverseresult;
     }
+
     public static int factorial(int f)
     {
-      int m = 0;
+      int m = 1;
 
-      for(int o = 0; o <= f; o++)
+      for(int i = 1; i <= f+1; i++)
       {
-        int g = o;
-        m = g*g;
+        m = i*m;
 
       }
 
@@ -58,8 +64,9 @@ public class assignment2
     public static void main(String[] args)
     {
       System.out.println(sumofsquares(3)+" Expect14");
-      System.out.println(countOccurences("Mississippi", "iss")+" expect2");
-      System.out.println(reverse("bad")+"expect dab");
+      //System.out.println(countOccurences("Mississippi", "iss")+" expect2");
+      String start = "bad";
+      System.out.println(reverse(start)+"expect dab");
       System.out.println(factorial(4)+"Expect24");
     }
 }
