@@ -10,46 +10,57 @@ public class magiceightball
     random = (Math.random())*10;
     if(random>9)
     {
-      System.out.println("yes");
+      final String a = "yes";
+      System.out.println(a);
     }
     else if(random>8 && random<7)
     {
-      System.out.println("no");
+      final String b = "no";
+      System.out.println(b);
     }
     else if(random>7 && random<6)
     {
-      System.out.println("its decidely so");
+      final String c = "its decidely so";
+      System.out.println(c);
     }
     else if(random>6 && random<7)
     {
-      System.out.println("never ever");
+      final String d = "never ever";
+      System.out.println(d);
     }
     else if(random>5 && random<6)
     {
-      System.out.println("who knows...");
+      final String e = "who knows...";
+      System.out.println(e);
     }
     else if(random>4 && random<5)
     {
-      System.out.println("a possibilty it is");
+      final String f = "a possibilty it is";
+      System.out.println(f);
     }
     else if(random>3 && random<4)
     {
-      System.out.println("ask thou friend");
+      final String g = "ask thou friend";
+      System.out.println(g);
     }
     else if(random>2 && random<3)
     {
-      System.out.println("think on it");
+      final String h = "think on it";
+      System.out.println(h);
     }
     else if(random>1 && random<2)
     {
-      System.out.println("why not?");
+      final String i = "why not?";
+      System.out.println(i);
     }
     else if(random>0 && random<1)
     {
-      System.out.println("no way");
+      final String j = "no way";
+      System.out.println(j);
     }
     else{
-      System.out.println("Spin again");
+      final String k = "Spin again";
+      System.out.println(k);
     }
   }
 

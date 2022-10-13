@@ -34,12 +34,12 @@ public class testRectangle
 
   public static void main(String[] args)
   {
-    Rectangle c1 = new Rectangle(10,10);
+    Rectangle c1 = new Rectangle(3,4);
 
-    Rectangle c2 = new Rectangle(2,2);
+    Rectangle c2 = new Rectangle(5,12);
 
 
-    testRectangle(c1, 100, 40, 14.1421356237);
-    testRectangle(c2, 4, 8, 2.82842712475);
+    testRectangle(c1, 12, 14, 5);
+    testRectangle(c2, 60, 34, 13);
   }
 }
