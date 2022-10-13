@@ -9,10 +9,24 @@ public class stringExplode{
     }
     return result;
   }
+  public static String testStringExplode(String a, String expected)
+  {
+    String result = stringExplode(a);
+    System.out.println("String input: " + a + "String expected: " + expected + "String result: " + result);
+    if(result.equals(expected))
+    {
+      System.out.println("PASS");
+    }
+    else{
+      System.out.println("FAIL");
+    }
+    return " ";
+  }
   public static void main(String[] args)
   {
-    System.out.println(stringExplode("abc") + " expect aababc");
-    System.out.println(stringExplode("dog") + " expect ddodog");
-    System.out.println(stringExplode("harp") + " expect hhaharharp");
+    testStringExplode("abc", "aababc");
+    testStringExplode("dog", "ddodog");
+    testStringExplode("harp", "hhaharharp");
+
   }
 }
