@@ -27,7 +27,7 @@ public class totalZLength
 
         System.out.print("words: ");
         for (String word : words)
-            System.out.print(words + " " );
+            System.out.print(word + " " );
 
         System.out.println();
 
