@@ -7,8 +7,8 @@ public class countLucky
 
         for(int i = 0; i<luckys.length; i++)
         {
-          double multiple = luckys[i]%7;
-          double testHAS = luckys[i]%10;
+          int multiple = luckys[i]%7;
+          int testHAS = luckys[i]%10;
           if(testHAS == 7 || multiple == 0)
           {
             result += 1;
