@@ -32,6 +32,7 @@ public class Hello2D
   }
 
 
+
   String[][] names = new String[0][0];
   names[0][0] = "Alene";
 

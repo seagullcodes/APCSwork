@@ -7,7 +7,7 @@ public class FolkloreScene implements Scene
     public FolkloreScene(PApplet p)
     {
         this.p = p;
-        Folklore = loadImage("Folklore.png");
+        Folklore = p.loadImage("Folklore.png");
     }
 
     public void display()
@@ -16,7 +16,7 @@ public class FolkloreScene implements Scene
 
     }
 
-    public void handleKeyPressed()
+    public void handleMouseClicked()
     {
 
     }

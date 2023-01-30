@@ -5,17 +5,17 @@ import java.util.*;
 
 public class finalDisplay extends PApplet
 {
-  String gameState;
-  PImage DoorOne;
-  PImage HalfOpen;
-  PImage Open;
 
-
+  private PImage DoorOne;
+  private PImage HalfOpen;
+  private PImage Open;
+  private ArrayList<Scene> scenes;
+  private int current;
     public void settings()
     {
         fullScreen();
         scenes = new ArrayList<Scene>();
-        scenes.add(new StartScene(this));
+        //scenes.add(new StartScene(this));
         scenes.add(new MenuScene(this));
         scenes.add(new DebutScene(this));
         scenes.add(new FearlessScene(this));
@@ -30,17 +30,18 @@ public class finalDisplay extends PApplet
 
     public void setup()
     {
-      gameState = "START";
+      //gameState = "START";
 
-
+      current = 4;
     }
 
 
     public void draw()
     {
+
         scenes.get(current).display();
-        if(gameState == "START")
-        {
+        //if(gameState == "START")
+        /*{
           homeScreen();
 
         }
@@ -53,14 +54,15 @@ public class finalDisplay extends PApplet
         {
           homeScreen2();
 
-        }
+        }*/
 
 
 
     }
-
+/*
     public void homeScreen()
     {
+
       background(255);
       DoorOne = loadImage("DoorOne.png");
             DoorOne.resize(600,600);
@@ -84,13 +86,14 @@ public class finalDisplay extends PApplet
       fill(0);
       text("welcome to lover house!", width/2, height/2);
     }
+    */
     public void keyPressed()
     {
 
     }
     public void mouseClicked()
     {
-      if(dist(mouseX, mouseY, width, height) < width && gameState == "START")
+    /*  if(dist(mouseX, mouseY, width, height) < width && gameState == "START")
       {
         background(255);
         gameState = "START1";
@@ -100,6 +103,8 @@ public class finalDisplay extends PApplet
         background(255);
         gameState = "START2";
       }
+      */
+
     }
 
 

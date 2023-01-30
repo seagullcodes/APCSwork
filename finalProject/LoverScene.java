@@ -7,7 +7,7 @@ public class LoverScene implements Scene
     public LoverScene(PApplet p)
     {
         this.p = p;
-        Lover = loadImage("Lover.png");
+        Lover = p.loadImage("Lover.png");
     }
 
     public void display()
@@ -16,7 +16,7 @@ public class LoverScene implements Scene
 
     }
 
-    public void handleKeyPressed()
+    public void handleMouseClicked()
     {
 
     }

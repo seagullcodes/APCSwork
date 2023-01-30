@@ -7,7 +7,7 @@ public class FearlessScene implements Scene
     public FearlessScene(PApplet p)
     {
         this.p = p;
-        Fearless = loadImage("Fearless.webp");
+        Fearless = p.loadImage("Fearless.webp");
     }
 
     public void display()
@@ -16,7 +16,7 @@ public class FearlessScene implements Scene
 
     }
 
-    public void handleKeyPressed()
+    public void handleMouseClicked()
     {
 
     }

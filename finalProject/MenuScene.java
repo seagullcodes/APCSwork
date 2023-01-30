@@ -20,9 +20,6 @@ public class MenuScene implements Scene
     {
 
     }
-    public static void main(String[] args)
-{
-
-}
+  
     private PApplet p;
 }

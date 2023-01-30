@@ -3,20 +3,20 @@ import processing.core.*;
 
 public class RedScene implements Scene
 {
-  PImage Red;
+    PImage Red;
     public RedScene(PApplet p)
     {
         this.p = p;
-        Red = loadImage("Red.png");
+        Red = p.loadImage("Red.png");
     }
 
     public void display()
     {
-        p.background(Red);
+        p.image(Red, 0, 0);
 
     }
 
-    public void handleKeyPressed()
+    public void handleMouseClicked()
     {
 
     }

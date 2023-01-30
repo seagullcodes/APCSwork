@@ -16,7 +16,7 @@ public class DebutScene implements Scene
 
     }
 
-    public void handleKeyPressed()
+    public void handleMouseClicked()
     {
 
     }

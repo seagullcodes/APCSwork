@@ -7,7 +7,7 @@ public class SpeakNowScene implements Scene
     public SpeakNowScene(PApplet p)
     {
         this.p = p;
-        SpeakNow = loadImage("SpeakNow.jpeg");
+        SpeakNow = p.loadImage("SpeakNow.jpeg");
     }
 
     public void display()
@@ -16,7 +16,7 @@ public class SpeakNowScene implements Scene
 
     }
 
-    public void handleKeyPressed()
+    public void handleMouseClicked()
     {
 
     }
