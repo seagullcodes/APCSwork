@@ -12,7 +12,7 @@ public class SpeakNowScene implements Scene
 
     public void display()
     {
-        p.background(SpeakNow);
+        p.image(SpeakNow, 0, 0);
 
     }
 

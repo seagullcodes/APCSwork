@@ -16,23 +16,24 @@ public class finalDisplay extends PApplet
         fullScreen();
         scenes = new ArrayList<Scene>();
         //scenes.add(new StartScene(this));
-        scenes.add(new MenuScene(this));
-        scenes.add(new DebutScene(this));
-        scenes.add(new FearlessScene(this));
+      //  scenes.add(new MenuScene(this));
+      //  scenes.add(new DebutScene(this));
+      //  scenes.add(new FearlessScene(this));
         scenes.add(new SpeakNowScene(this));
-        scenes.add(new RedScene(this));
+      /*  scenes.add(new RedScene(this));
         scenes.add(new Ninteen89Scene(this));
         scenes.add(new LoverScene(this));
         scenes.add(new ReputationScene(this));
         scenes.add(new FolkloreScene(this));
         scenes.add(new EvermoreScene(this));
+        */
     }
 
     public void setup()
     {
       //gameState = "START";
 
-      current = 4;
+      current = 0;
     }
 
 
