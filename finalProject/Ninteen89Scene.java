@@ -12,7 +12,7 @@ public class Ninteen89Scene implements Scene
 
     public void display()
     {
-        p.background(a1989);
+        p.image(a1989,0,0);
 
     }
 

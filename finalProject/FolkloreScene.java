@@ -12,7 +12,7 @@ public class FolkloreScene implements Scene
 
     public void display()
     {
-        p.background(Folklore);
+        p.image(Folklore,0,0);
 
     }
 

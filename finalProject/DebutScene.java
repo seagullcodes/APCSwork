@@ -7,12 +7,12 @@ public class DebutScene implements Scene
     public DebutScene(PApplet p)
     {
         this.p = p;
-        Debut = p.loadImage("Debut.webp");
+        Debut = p.loadImage("Debut.png");
     }
 
     public void display()
     {
-        p.background(Debut);
+        p.image(Debut,0,0);
 
     }
 

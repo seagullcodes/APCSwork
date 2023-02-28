@@ -1,39 +1,42 @@
 
 import processing.core.*;
 import java.util.*;
+//import processing.sound.*;
 
 
 public class finalDisplay extends PApplet
 {
+ 
+ 
 
   private PImage DoorOne;
   private PImage HalfOpen;
   private PImage Open;
   private ArrayList<Scene> scenes;
-  private int current;
+  private int current = 0;
     public void settings()
     {
         fullScreen();
         scenes = new ArrayList<Scene>();
         //scenes.add(new StartScene(this));
       //  scenes.add(new MenuScene(this));
-      //  scenes.add(new DebutScene(this));
-      //  scenes.add(new FearlessScene(this));
+        scenes.add(new DebutScene(this));
+        scenes.add(new FearlessScene(this));
         scenes.add(new SpeakNowScene(this));
-      /*  scenes.add(new RedScene(this));
-        scenes.add(new Ninteen89Scene(this));
-        scenes.add(new LoverScene(this));
-        scenes.add(new ReputationScene(this));
-        scenes.add(new FolkloreScene(this));
-        scenes.add(new EvermoreScene(this));
-        */
+        scenes.add(new RedScene(this));
+        scenes.add(new Ninteen89Scene(this));     
+       scenes.add(new ReputationScene(this));
+       scenes.add(new LoverScene(this));
+      scenes.add(new FolkloreScene(this));
+      scenes.add(new EvermoreScene(this));
+        
     }
 
     public void setup()
     {
       //gameState = "START";
 
-      current = 0;
+   
     }
 
 
@@ -90,11 +93,30 @@ public class finalDisplay extends PApplet
     */
     public void keyPressed()
     {
-
+        if(keyCode == UP)
+        {
+            current++;
+            System.out.println("HI");
+        }
+        else if(keyCode == DOWN)
+        {
+            current--;
+        }
+        else if(keyCode == 'a')
+        {
+            current++;
+        }
+        
     }
+    
     public void mouseClicked()
     {
-    /*  if(dist(mouseX, mouseY, width, height) < width && gameState == "START")
+       if(dist(mouseX, mouseY, width, height) < width)
+      {
+        currenta++;
+        System.out.println("HI");
+      } 
+    /* if(dist(mouseX, mouseY, width, height) < width && gameState == "START")
       {
         background(255);
         gameState = "START1";

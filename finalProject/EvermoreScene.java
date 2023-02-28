@@ -12,7 +12,7 @@ public class EvermoreScene implements Scene
 
     public void display()
     {
-        p.background(Evermore);
+        p.image(Evermore,0,0);
 
     }
 

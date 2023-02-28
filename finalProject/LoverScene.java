@@ -12,7 +12,7 @@ public class LoverScene implements Scene
 
     public void display()
     {
-        p.background(Lover);
+        p.image(Lover,0,0);
 
     }
 

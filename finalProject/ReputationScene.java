@@ -12,7 +12,7 @@ public class ReputationScene implements Scene
 
     public void display()
     {
-        p.background(Rep);
+        p.image(Rep,0,0);
 
     }
 

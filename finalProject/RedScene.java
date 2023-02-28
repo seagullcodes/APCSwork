@@ -1,9 +1,11 @@
 import processing.core.*;
-
+//import processing.sound.*;
 
 public class RedScene implements Scene
 {
+    //SoundFile Reds; 
     PImage Red;
+    //Reds = new SoundFile(this, "Red.wav");
     public RedScene(PApplet p)
     {
         this.p = p;
