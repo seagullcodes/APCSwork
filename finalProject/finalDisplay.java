@@ -1,5 +1,6 @@
-
+/*
 import processing.core.*;
+import processing.sound.*;
 import java.util.*;
 //import processing.sound.*;
 
@@ -58,12 +59,12 @@ public class finalDisplay extends PApplet
         {
           homeScreen2();
 
-        }*/
+        }
 
 
 
     }
-/*
+
     public void homeScreen()
     {
 
@@ -90,7 +91,7 @@ public class finalDisplay extends PApplet
       fill(0);
       text("welcome to lover house!", width/2, height/2);
     }
-    */
+    
     public void keyPressed()
     {
         if(keyCode == UP)
@@ -113,10 +114,10 @@ public class finalDisplay extends PApplet
     {
        if(dist(mouseX, mouseY, width, height) < width)
       {
-        currenta++;
+        current++;
         System.out.println("HI");
       } 
-    /* if(dist(mouseX, mouseY, width, height) < width && gameState == "START")
+     if(dist(mouseX, mouseY, width, height) < width && gameState == "START")
       {
         background(255);
         gameState = "START1";
@@ -126,7 +127,7 @@ public class finalDisplay extends PApplet
         background(255);
         gameState = "START2";
       }
-      */
+      
 
     }
 
@@ -137,3 +138,5 @@ public class finalDisplay extends PApplet
     }
 
 }
+*/
+

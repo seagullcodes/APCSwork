@@ -3,7 +3,7 @@ import processing.core.*;
 
 public class DebutScene implements Scene
 {
-  PImage Debut;
+    PImage Debut;
     public DebutScene(PApplet p)
     {
         this.p = p;

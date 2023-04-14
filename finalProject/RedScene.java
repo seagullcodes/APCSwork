@@ -1,21 +1,24 @@
 import processing.core.*;
-//import processing.sound.*;
+import processing.sound.*;
 
 public class RedScene implements Scene
 {
-    //SoundFile Reds; 
+    SoundFile Reds; 
     PImage Red;
-    //Reds = new SoundFile(this, "Red.wav");
-    public RedScene(PApplet p)
+   
+   
+   
+   public RedScene(PApplet p)
     {
         this.p = p;
         Red = p.loadImage("Red.png");
+        Reds = new SoundFile(p, "Red.wav");
     }
 
     public void display()
     {
         p.image(Red, 0, 0);
-
+        Reds.play();
     }
 
     public void handleMouseClicked()
