@@ -5,7 +5,7 @@ import java.util.*;
 public class Game implements Scenel
 {
    
-    public int score = 3;
+    public int score = 20;
  
     private int a = 0;
    
@@ -13,12 +13,12 @@ public class Game implements Scenel
     public Game(ColorIt p)
     {
         this.p = p;
-        madeleine = new Character(p, 40, 40, p.width/2, 500, 0xff341FEB);
+        madeleine = new Character(p, 40, 40, 0, 500, 0xff341FEB);
     
        
-        for(int i = 0; i<10; i++)
+        for(int i = 0; i<40; i++)
         {
-            fireslist.add(new Fire(p, ((int)p.random(1100, 1300)), ((int)p.random(480,520))));
+            fireslist.add(new Fire(p, p.width,(int)p.random((int)(p.height)), (int)p.random(10)));
         }
     }
 
@@ -26,8 +26,11 @@ public class Game implements Scenel
     {
         p.background(0xffeba16a);
         madeleine.display();
+        font1 = p.createFont("fonty.ttf", 80);
+        p.text("amount of lives", 100, 100);
+        p.text(score, 100, 150);
      
-        if(score == -90)
+        if(score == 0)
         {
             p.setScene(2);
         }
@@ -53,14 +56,14 @@ public class Game implements Scenel
             System.out.println(p.millis());
          
             //p.delay(3000);
-            if(p.millis() == a)
-            {
-                madeleine.cState = 0;
-                System.out.println("timer is working");
-                
-            }
-            score--;
+           
+            score=score-1;
          }
+        }
+        if(p.millis() >= a)
+        {
+         madeleine.cState = 0;
+         System.out.println("timer is working");
         }
     }
     
@@ -84,7 +87,7 @@ public class Game implements Scenel
   
     
     private Character madeleine;
-  
+    private PFont font1;
     private ArrayList<Fire> fireslist = new ArrayList<Fire>();
     
 }

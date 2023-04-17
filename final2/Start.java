@@ -13,7 +13,7 @@ public class Start implements Scenel
 
     public void display()
     {
-    font1 = p.createFont("fonty.ttf", 80);
+    font1 = p.createFont("fonty.ttf", 30);
         p.background(0xffe0a5e6);
        p.textFont(font1);
        p.text("Welcome to Jumper",100, p.height/2);

@@ -12,6 +12,7 @@ public class Character
         this.p = p;
         this.w = w;
         this.h = h;
+     
         this.startX = startX;
         this.startY = startY;
         this.colora = colora;
@@ -26,6 +27,7 @@ public class Character
         //p.ellipse(p.width/2,p.height/2,50,50);
         p.fill(colora);
        //p.image(burn, startX, startY);
+ 
         
         if (startY>(500)) { //limit how far character can fall
              startY = 500;
@@ -84,6 +86,7 @@ public class Character
     private double a = 0;
     private int colora = 000000;
     public int cState = 0;
+   
 
 }
 

@@ -12,8 +12,8 @@ public class End implements Scenel
     public void display()
     {
         p.background(659465);
-        p.text("Thank you for playing!", p.width/2, p.height/2);
-        p.text("Hit the down key twice to go to start scene, or once to play again!", p.width/2, p.height/2+100);
+        p.text("Thank you for playing!", 100, p.height/2);
+        p.text("Hit the down key twice to go to start scene, or once to play again!", 100, p.height/2+100);
         
         
     }

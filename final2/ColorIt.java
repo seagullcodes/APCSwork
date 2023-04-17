@@ -14,16 +14,16 @@ public class ColorIt extends PApplet
     public void settings()
     {
         fullScreen();
+        
+    }
+
+    public void setup()
+    {
         Game a = new Game(this);
         scenesa = new ArrayList<Scenel>();
         scenesa.add(new Start(this));
         scenesa.add(a);
         scenesa.add(new End(this));
-    }
-
-    public void setup()
-    {
-
 
    
     }
@@ -54,13 +54,19 @@ public class ColorIt extends PApplet
         {
             scenesa.get(currento).handleKeyPressed();
         }
+        else if(currento == 2)
+        {
+            scenesa.get(currento).handleKeyPressed();
+        }
         else if(keyCode == DOWN && currento == 1)
         {
             currento = 0;
+            System.out.println("function 4");
         }
-        else if(keyCode == 2 && keyCode == UP)
+        else if(currento == 2 && keyCode == UP)
         {
             currento = 0;
+            System.out.println("function 5");
         }
        
     }
