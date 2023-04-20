@@ -1,10 +1,12 @@
 
 import processing.core.*;
 import java.util.*;
+import processing.sound.*;
 
 public class ColorIt extends PApplet
 {
  
+ SoundFile music;
  
 
  
@@ -24,6 +26,7 @@ public class ColorIt extends PApplet
         scenesa.add(new Start(this));
         scenesa.add(a);
         scenesa.add(new End(this));
+        music = new SoundFile(this, "Phoebe Bridgers - Kyoto (Official Video).mp3");
 
    
     }
@@ -44,30 +47,31 @@ public class ColorIt extends PApplet
 
     public void keyPressed()
     {
-       
-       if(keyCode == UP && currento == 0)
+       if(currento == 0)
+       {
+        if(keyCode == UP)
         {
             currento = 1;
-            System.out.println("HI");
+            music.play();
         }
+       }
+      
         else if(currento == 1)
         {
             scenesa.get(currento).handleKeyPressed();
+            
+            
         }
         else if(currento == 2)
         {
             scenesa.get(currento).handleKeyPressed();
+            if(keyCode == DOWN)
+            {
+             currento = 0;
+            }
+            
         }
-        else if(keyCode == DOWN && currento == 1)
-        {
-            currento = 0;
-            System.out.println("function 4");
-        }
-        else if(currento == 2 && keyCode == UP)
-        {
-            currento = 0;
-            System.out.println("function 5");
-        }
+       
        
     }
     
@@ -81,5 +85,7 @@ public class ColorIt extends PApplet
     {
         PApplet.main("ColorIt");
     }
+    
+    
 
 }

@@ -29,14 +29,18 @@ public class Character
        //p.image(burn, startX, startY);
  
         
-        if (startY>(500)) { //limit how far character can fall
-             startY = 500;
+        if (startY>(800)) { //limit how far character can fall
+             startY = 800;
              v = 0;
              a=0;
         }
        else if (startX >=600)
       {
          startX = 600;
+     }
+     if(startY<0)
+     {
+        startY = 0;
      }
         
        if(cState ==  0)
@@ -65,6 +69,15 @@ public class Character
     public int getStartY()
     {
         return startY;
+    }
+    
+    public void fixStartX(int n)
+    {
+        startX = n;
+    }
+    public void fixStartY(int n)
+    {
+        startY = n;
     }
 
       public void jump()
