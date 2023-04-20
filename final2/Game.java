@@ -16,9 +16,13 @@ public class Game implements Scenel
         madeleine = new Character(p, 40, 40, 50, 500, 0xff341FEB);
         fireNound = new SoundFile(p, "fire.mp3");
        
-        for(int i = 0; i<40; i++)
+        for(int i = 0; i<30; i++)
         {
             fireslist.add(new Fire(p, p.width,(int)p.random((int)(p.height)), (int)p.random(10)));
+        }
+        for(int i = 0; i<5; i++)
+        {
+            cloudlist.add(new Cloud(p));
         }
     }
 
@@ -46,6 +50,16 @@ public class Game implements Scenel
             f.display();
         }
         
+        for(Cloud c: cloudlist)
+        {
+            c.display();
+            if(p.dist(c.getCX(), c.getCY(),                         madeleine.getStartX(),                         madeleine.getStartY())  < 40)
+            {
+            score++;
+            madeleine.cState = 0;
+            }
+        }
+            
     }
     public void scoreReset()
     {
@@ -59,7 +73,7 @@ public class Game implements Scenel
             if(p.dist(madeleine.getStartX(), madeleine.getStartY(), f.getFX(), f.getFY()) < 40)
             {
             scoreReset();
-            fireNound.play();
+            //fireNound.play();
             System.out.println("collisionW");
             a = p.millis()+3000;
             madeleine.cState = 1;
@@ -100,5 +114,6 @@ public class Game implements Scenel
     private Character madeleine;
     private PFont font1;
     private ArrayList<Fire> fireslist = new ArrayList<Fire>();
+    private ArrayList<Cloud> cloudlist = new ArrayList<Cloud>();
     
 }
