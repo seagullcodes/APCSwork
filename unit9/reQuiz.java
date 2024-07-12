@@ -4,14 +4,14 @@ public class transform
 {
   public static int[] size(ArrayList<String> words)
   {
-    int[] alene = new int[words.size()];
+    int[] a2 = new int[words.size()];
     double[]
-    String[] poop 
+    String[] string1 
     for(int i = 0; i < words.size(); i++)
     {
-      alene.add(words.get(i).size());
+      a2.add(words.get(i).size());
     }
-    return alene;
+    return a2;
   }
 
   public static ArrayList<Double> geo(int n)
